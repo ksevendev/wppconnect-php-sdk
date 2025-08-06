@@ -10,8 +10,22 @@ class ContactService {
         $this->client = $sdk->client();
     }
 
-    public function getAllContacts(string $session) {
-        $response = $this->client->get("/api/{$session}/all-contacts");
+    /**
+     * 
+     * 
+     */
+    public function {phone}($params = []) {
+        $response = $this->client->get("/api/{session}/profile-pic/{phone}");
         return json_decode($response->getBody(), true);
     }
+
+    /**
+     * 
+     * 
+     */
+    public function {phone}($params = []) {
+        $response = $this->client->get("/api/{session}/profile-status/{phone}");
+        return json_decode($response->getBody(), true);
+    }
+
 }
